@@ -3,1074 +3,644 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>SME Shield</title>
-
-  <meta
-    name="description"
-    content="SME Shield helps Mexican small businesses take practical cybersecurity actions before an incident becomes a business interruption."
-  />
-
+  <title>SME Shield — Protect your business before the breach</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- =========================
-       TOP NAVIGATION
-  ========================== -->
-
   <header class="topbar">
-    <div class="container nav">
-
-      <a href="#home" class="brand">
-        <span class="brand-mark">◆</span>
-        <span>SME Shield</span>
-      </a>
-
-      <nav class="nav-links">
-        <a href="#diagnostic">Diagnostic</a>
-        <a href="#actions">5 Actions</a>
-        <a href="#backups">Backups</a>
-        <a href="#incidents">Incidents</a>
-      </nav>
-
-      <a href="#diagnostic" class="nav-button">
-        Start protection
-      </a>
-
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div>
+        <strong>SME Shield</strong>
+        <span>Business continuity protection</span>
+      </div>
     </div>
+
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#actions">Priority actions</a>
+      <a href="#incident">Incident response</a>
+    </nav>
   </header>
 
+  <main>
 
-  <main id="home">
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
+    <!-- HERO -->
     <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">MONEY · SME SHIELD</p>
 
-      <div class="container hero-grid">
+        <h1>Protect your business before the breach.</h1>
 
-        <div class="hero-copy">
+        <p class="hero-text">
+          A lightweight security operating layer for Mexican SMEs.
+          Know what matters, fix the five biggest gaps, and keep your
+          business running.
+        </p>
 
-          <div class="eyebrow">
-            CYBERSECURITY FOR MEXICAN SMEs
-          </div>
+        <div class="hero-actions">
+          <a href="#onboarding" class="button primary">
+            Protect my business
+          </a>
 
-          <h1>
-            Protect your business
-            <span>before the breach.</span>
-          </h1>
-
-          <p class="hero-text">
-            SME Shield turns basic cybersecurity into a simple operating layer
-            for small businesses that do not have a dedicated security team.
-          </p>
-
-          <div class="hero-actions">
-
-            <a href="#diagnostic" class="primary-button">
-              Check my business
-            </a>
-
-            <a href="#economics" class="secondary-button">
-              See the economic case
-            </a>
-
-          </div>
-
-          <div class="hero-note">
-            <span class="status-dot"></span>
-            AI-assisted recommendations are simulated in this prototype.
-          </div>
-
+          <a href="#value" class="button secondary">
+            See the economic case
+          </a>
         </div>
 
-
-        <div class="hero-card">
-
-          <div class="card-top">
-            <div>
-              <span class="small-label">BUSINESS STATUS</span>
-              <h3>Taquería El Buen Sabor</h3>
-            </div>
-
-            <span class="demo-pill">
-              DEMO
-            </span>
-          </div>
-
-          <div class="security-score">
-
-            <div class="score-circle">
-              <strong>62</strong>
-              <span>/100</span>
-            </div>
-
-            <div class="score-copy">
-              <strong>Basic protection in place</strong>
-              <p>
-                5 priority actions identified.
-              </p>
-            </div>
-
-          </div>
-
-          <div class="mini-stats">
-
-            <div class="mini-stat">
-              <span>Devices</span>
-              <strong>5</strong>
-              <small>2 need attention</small>
-            </div>
-
-            <div class="mini-stat">
-              <span>Accounts</span>
-              <strong>8</strong>
-              <small>3 need attention</small>
-            </div>
-
-            <div class="mini-stat">
-              <span>Backups</span>
-              <strong>✓</strong>
-              <small>Last checked today</small>
-            </div>
-
-          </div>
-
-        </div>
-
+        <p class="simulation-note">
+          SIMULATED DEMO — security signals and recommendations are illustrative.
+        </p>
       </div>
 
+      <div class="hero-card">
+        <div class="score-header">
+          <span>Protection readiness</span>
+          <strong>62/100</strong>
+        </div>
+
+        <div class="score-bar">
+          <div class="score-progress"></div>
+        </div>
+
+        <p>
+          Your business has several preventable risks that can be addressed
+          before they become expensive downtime.
+        </p>
+
+        <div class="mini-stat">
+          <span>Priority gaps</span>
+          <strong>5</strong>
+        </div>
+
+        <div class="mini-stat">
+          <span>Backup status</span>
+          <strong>Needs review</strong>
+        </div>
+
+        <div class="mini-stat">
+          <span>Human response</span>
+          <strong>Available</strong>
+        </div>
+      </div>
     </section>
 
+    <!-- MONEY VALUE -->
+    <section class="value-section" id="value">
+      <div>
+        <p class="eyebrow">THE MONEY CASE</p>
+        <h2>Prevention should cost less than recovery.</h2>
+      </div>
 
-    <!-- =========================
-         VALUE PROPOSITION
-    ========================== -->
-
-    <section class="section-light">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div class="eyebrow">
-            THE MONEY QUESTION
-          </div>
-
-          <h2>
-            Cybersecurity should protect
-            <span>business continuity.</span>
-          </h2>
-
+      <div class="value-grid">
+        <div class="value-card">
+          <span>PREVENTION</span>
+          <strong>$899 MXN / month</strong>
           <p>
-            A small business owner should not need to become a cybersecurity
-            expert. The value is simple: take a few concrete actions now
-            instead of discovering the cost after an incident.
+            Predictable protection focused on the actions that matter most.
           </p>
-
         </div>
 
-
-        <div class="value-grid">
-
-          <div class="value-card">
-            <div class="value-number">01</div>
-            <h3>Know your exposure</h3>
-            <p>
-              Understand which devices and accounts need attention.
-            </p>
-          </div>
-
-          <div class="value-card">
-            <div class="value-number">02</div>
-            <h3>Prioritize what matters</h3>
-            <p>
-              Focus on five practical actions instead of a huge security
-              checklist.
-            </p>
-          </div>
-
-          <div class="value-card">
-            <div class="value-number">03</div>
-            <h3>Stay operational</h3>
-            <p>
-              Have a backup and incident-response path before something goes
-              wrong.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         DIAGNOSTIC
-    ========================== -->
-
-    <section id="diagnostic" class="section-dark">
-
-      <div class="container">
-
-        <div class="section-heading light">
-
-          <div class="eyebrow">
-            STEP 01 · ONBOARDING
-          </div>
-
-          <h2>
-            Start with the business,
-            <span>not the technology.</span>
-          </h2>
-
+        <div class="value-card warning">
+          <span>RECOVERY</span>
+          <strong>Potentially much higher</strong>
           <p>
-            Tell SME Shield the minimum information needed to create a practical
-            starting point.
+            Downtime, lost sales, recovery work and customer disruption can
+            become the real cost of a breach.
           </p>
-
         </div>
-
-
-        <div class="diagnostic-card">
-
-          <div class="form-progress">
-
-            <div class="progress-step active">
-              <span>1</span>
-              Business
-            </div>
-
-            <div class="progress-line"></div>
-
-            <div class="progress-step">
-              <span>2</span>
-              Devices
-            </div>
-
-            <div class="progress-line"></div>
-
-            <div class="progress-step">
-              <span>3</span>
-              Accounts
-            </div>
-
-          </div>
-
-
-          <form id="onboardingForm">
-
-            <div class="form-grid">
-
-              <div class="form-group">
-
-                <label for="businessName">
-                  Business name
-                </label>
-
-                <input
-                  type="text"
-                  id="businessName"
-                  placeholder="Example: Taquería El Buen Sabor"
-                  required
-                />
-
-              </div>
-
-
-              <div class="form-group">
-
-                <label for="businessType">
-                  Business type
-                </label>
-
-                <select id="businessType" required>
-
-                  <option value="">
-                    Select one
-                  </option>
-
-                  <option value="restaurant">
-                    Restaurant / Food
-                  </option>
-
-                  <option value="retail">
-                    Retail
-                  </option>
-
-                  <option value="professional">
-                    Professional services
-                  </option>
-
-                  <option value="health">
-                    Health / Clinic
-                  </option>
-
-                  <option value="other">
-                    Other
-                  </option>
-
-                </select>
-
-              </div>
-
-
-              <div class="form-group">
-
-                <label for="employees">
-                  Approximate employees
-                </label>
-
-                <select id="employees" required>
-
-                  <option value="">
-                    Select one
-                  </option>
-
-                  <option value="1-5">
-                    1–5
-                  </option>
-
-                  <option value="6-20">
-                    6–20
-                  </option>
-
-                  <option value="21-50">
-                    21–50
-                  </option>
-
-                  <option value="51-100">
-                    51–100
-                  </option>
-
-                </select>
-
-              </div>
-
-
-              <div class="form-group">
-
-                <label for="emailSystem">
-                  Main email system
-                </label>
-
-                <select id="emailSystem">
-
-                  <option value="">
-                    Select one
-                  </option>
-
-                  <option value="google">
-                    Google Workspace
-                  </option>
-
-                  <option value="microsoft">
-                    Microsoft 365
-                  </option>
-
-                  <option value="other">
-                    Other
-                  </option>
-
-                </select>
-
-              </div>
-
-            </div>
-
-
-            <div class="privacy-note">
-
-              <strong>Privacy boundary</strong>
-
-              <p>
-                This prototype uses demo information only. Do not enter
-                passwords, CURP, tax records, customer information or other
-                real sensitive personal data.
-              </p>
-
-            </div>
-
-
-            <button type="submit" class="primary-button full-width">
-              Continue to diagnostic →
-            </button>
-
-          </form>
-
-        </div>
-
       </div>
-
     </section>
 
+    <!-- ONBOARDING -->
+    <section class="section" id="onboarding">
+      <div class="section-heading">
+        <p class="eyebrow">STEP 1</p>
+        <h2>Set up your business</h2>
+        <p>
+          SME Shield starts with a simple picture of the business.
+          No technical expertise required.
+        </p>
+      </div>
 
-    <!-- =========================
-         DASHBOARD
-    ========================== -->
+      <form id="onboardingForm" class="form-card">
 
-    <section id="actions" class="section">
+        <div class="form-group">
+          <label for="businessName">Business name</label>
+          <input
+            type="text"
+            id="businessName"
+            name="businessName"
+            placeholder="e.g. Café Reforma"
+            required
+          />
+        </div>
 
-      <div class="container">
+        <div class="form-group">
+          <label for="businessType">Business type</label>
+          <select id="businessType" name="businessType" required>
+            <option value="">Select one</option>
+            <option value="retail">Retail</option>
+            <option value="restaurant">Restaurant / Food</option>
+            <option value="professional">Professional services</option>
+            <option value="construction">Construction</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
 
-        <div class="dashboard-header">
+        <div class="form-group">
+          <label for="employees">Approximate employees</label>
+          <select id="employees" name="employees" required>
+            <option value="">Select one</option>
+            <option value="1-5">1–5</option>
+            <option value="6-20">6–20</option>
+            <option value="21-50">21–50</option>
+            <option value="51-100">51–100</option>
+          </select>
+        </div>
 
+        <button type="submit" class="button primary">
+          Build my protection view
+        </button>
+
+        <p id="onboardingMessage" class="form-message"></p>
+      </form>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="section dashboard-section" id="dashboard">
+
+      <div class="section-heading">
+        <p class="eyebrow">BUSINESS CONTINUITY DASHBOARD</p>
+        <h2 id="dashboardTitle">Your business protection view</h2>
+        <p>
+          SME Shield focuses on practical actions instead of pretending
+          to provide complete cybersecurity.
+        </p>
+      </div>
+
+      <!-- DEVICE & ACCOUNT INVENTORY -->
+      <div class="inventory-section">
+
+        <div class="inventory-heading">
           <div>
-
-            <div class="eyebrow">
-              STEP 02 · BUSINESS DASHBOARD
-            </div>
-
-            <h2>
-              Your protection
-              <span>starting point.</span>
-            </h2>
-
-          </div>
-
-          <div class="dashboard-demo">
-            SIMULATED DEMO
-          </div>
-
-        </div>
-
-
-        <div class="dashboard-grid">
-
-          <div class="dashboard-main">
-
-            <div class="panel score-panel">
-
-              <div class="panel-heading">
-                <div>
-                  <span class="small-label">
-                    PROTECTION BASELINE
-                  </span>
-
-                  <h3>
-                    Your current starting point
-                  </h3>
-                </div>
-
-                <div class="score-small">
-                  62
-                </div>
-              </div>
-
-              <div class="score-bar">
-                <div class="score-fill"></div>
-              </div>
-
-              <p class="muted">
-                This is a simulated prototype signal, not a cybersecurity
-                certification or guarantee of safety.
-              </p>
-
-            </div>
-
-
-            <div class="panel">
-
-              <div class="panel-heading">
-
-                <div>
-                  <span class="small-label">
-                    PRIORITY ACTIONS
-                  </span>
-
-                  <h3>
-                    Your 5 actions
-                  </h3>
-                </div>
-
-                <span class="action-count">
-                  2 / 5 attention needed
-                </span>
-
-              </div>
-
-
-              <div class="action-list">
-
-                <div class="action-item high">
-
-                  <div class="action-number">
-                    1
-                  </div>
-
-                  <div class="action-content">
-
-                    <div class="action-title">
-                      Activate two-step verification
-                    </div>
-
-                    <div class="action-description">
-                      Protect your main business email account.
-                    </div>
-
-                  </div>
-
-                  <span class="priority-tag high-tag">
-                    HIGH
-                  </span>
-
-                  <button class="action-button">
-                    Review
-                  </button>
-
-                </div>
-
-
-                <div class="action-item high">
-
-                  <div class="action-number">
-                    2
-                  </div>
-
-                  <div class="action-content">
-
-                    <div class="action-title">
-                      Review account access
-                    </div>
-
-                    <div class="action-description">
-                      Check who still has access to business accounts.
-                    </div>
-
-                  </div>
-
-                  <span class="priority-tag high-tag">
-                    HIGH
-                  </span>
-
-                  <button class="action-button">
-                    Review
-                  </button>
-
-                </div>
-
-
-                <div class="action-item medium">
-
-                  <div class="action-number">
-                    3
-                  </div>
-
-                  <div class="action-content">
-
-                    <div class="action-title">
-                      Verify your backups
-                    </div>
-
-                    <div class="action-description">
-                      Make sure critical business information can be restored.
-                    </div>
-
-                  </div>
-
-                  <span class="priority-tag medium-tag">
-                    MEDIUM
-                  </span>
-
-                  <button class="action-button">
-                    Review
-                  </button>
-
-                </div>
-
-
-                <div class="action-item medium">
-
-                  <div class="action-number">
-                    4
-                  </div>
-
-                  <div class="action-content">
-
-                    <div class="action-title">
-                      Update devices and systems
-                    </div>
-
-                    <div class="action-description">
-                      Identify devices that are missing important updates.
-                    </div>
-
-                  </div>
-
-                  <span class="priority-tag medium-tag">
-                    MEDIUM
-                  </span>
-
-                  <button class="action-button">
-                    Review
-                  </button>
-
-                </div>
-
-
-                <div class="action-item low">
-
-                  <div class="action-number">
-                    5
-                  </div>
-
-                  <div class="action-content">
-
-                    <div class="action-title">
-                      Define an incident response plan
-                    </div>
-
-                    <div class="action-description">
-                      Know what to do and who to contact if something happens.
-                    </div>
-
-                  </div>
-
-                  <span class="priority-tag low-tag">
-                    LOW
-                  </span>
-
-                  <button class="action-button">
-                    Review
-                  </button>
-
-                </div>
-
-              </div>
-
-            </div>
-
-
-            <!-- =========================
-                 AI COPILOT
-            ========================== -->
-
-            <div class="panel ai-panel">
-
-              <div class="ai-header">
-
-                <div class="ai-icon">
-                  ✦
-                </div>
-
-                <div>
-
-                  <span class="small-label">
-                    AI SECURITY COPILOT
-                  </span>
-
-                  <h3>
-                    Simulated recommendation
-                  </h3>
-
-                </div>
-
-                <span class="simulated-label">
-                  SIMULATED
-                </span>
-
-              </div>
-
-
-              <div class="ai-message">
-
-                <strong>
-                  Your highest-value first action:
-                </strong>
-
-                <p>
-                  Activate two-step verification on the main business email
-                  account. Email access can affect other connected business
-                  services, so this is currently marked as a high-priority
-                  action.
-                </p>
-
-              </div>
-
-
-              <div class="ai-boundary">
-
-                <strong>
-                  Human responsibility:
-                </strong>
-
-                This recommendation is simulated. Important security decisions
-                require human review and confirmation.
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <aside class="dashboard-side">
-
-            <div id="backups" class="side-card backup-card">
-
-              <div class="side-icon">
-                ✓
-              </div>
-
-              <span class="small-label">
-                BACKUPS
-              </span>
-
-              <h3>
-                Backup status
-              </h3>
-
-              <div class="status-success">
-                Backup configured
-              </div>
-
-              <p>
-                Last simulated verification:
-                <strong>Today, 10:24 AM</strong>
-              </p>
-
-              <button class="secondary-button full-width">
-                View details
-              </button>
-
-            </div>
-
-
-            <div id="incidents" class="side-card incident-card">
-
-              <div class="side-icon warning">
-                !
-              </div>
-
-              <span class="small-label">
-                INCIDENT RESPONSE
-              </span>
-
-              <h3>
-                Something happened?
-              </h3>
-
-              <p>
-                Follow the response path and connect with a human when the
-                incident requires escalation.
-              </p>
-
-              <button
-                id="incidentButton"
-                class="primary-button full-width"
-              >
-                Open response path
-              </button>
-
-            </div>
-
-          </aside>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         ECONOMIC CASE
-    ========================== -->
-
-    <section id="economics" class="section-light">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div class="eyebrow">
-            MONEY LENS
-          </div>
-
-          <h2>
-            Prevention vs.
-            <span>business interruption.</span>
-          </h2>
-
-          <p>
-            The customer is not buying cybersecurity jargon. The customer is
-            protecting continuity. These numbers are illustrative prototype
-            values, not a prediction of an individual company's losses.
-          </p>
-
-        </div>
-
-
-        <div class="economic-grid">
-
-          <div class="economic-card protection">
-
-            <span class="small-label">
-              PREVENTION
-            </span>
-
-            <div class="economic-number">
-              MX$499
-              <span>/ month</span>
-            </div>
-
+            <p class="eyebrow">STEP 2</p>
+            <h3>Devices & accounts</h3>
             <p>
-              Illustrative SME Shield protection price for the prototype.
+              Identify the systems that matter to your business before
+              deciding what needs protection.
             </p>
-
-            <ul>
-              <li>Priority security actions</li>
-              <li>Backup verification</li>
-              <li>Basic monitoring signals</li>
-              <li>Incident response path</li>
-            </ul>
-
           </div>
 
-
-          <div class="economic-arrow">
-            VS
+          <div class="inventory-status">
+            <span>Inventory status</span>
+            <strong id="inventoryStatus">Not reviewed</strong>
           </div>
+        </div>
 
+        <div class="inventory-grid">
 
-          <div class="economic-card recovery">
-
-            <span class="small-label">
-              POTENTIAL RECOVERY
-            </span>
-
-            <div class="economic-number">
-              MX$50k+
+          <div class="inventory-card">
+            <div class="inventory-card-top">
+              <div class="inventory-icon">D</div>
+              <div>
+                <h4>Business devices</h4>
+                <p>Computers, phones and other devices used for work.</p>
+              </div>
             </div>
 
+            <div class="inventory-number">
+              <strong id="deviceCount">0</strong>
+              <span>devices identified</span>
+            </div>
+
+            <div class="inventory-list">
+              <label class="inventory-check">
+                <input type="checkbox" class="inventory-item" />
+                <span>Work laptops / computers</span>
+              </label>
+
+              <label class="inventory-check">
+                <input type="checkbox" class="inventory-item" />
+                <span>Business phones</span>
+              </label>
+
+              <label class="inventory-check">
+                <input type="checkbox" class="inventory-item" />
+                <span>Other connected devices</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="inventory-card">
+            <div class="inventory-card-top">
+              <div class="inventory-icon">A</div>
+              <div>
+                <h4>Business accounts</h4>
+                <p>Accounts that could affect business continuity.</p>
+              </div>
+            </div>
+
+            <div class="inventory-number">
+              <strong id="accountCount">0</strong>
+              <span>accounts identified</span>
+            </div>
+
+            <div class="inventory-list">
+              <label class="inventory-check">
+                <input type="checkbox" class="inventory-item" />
+                <span>Email / Google Workspace / Microsoft</span>
+              </label>
+
+              <label class="inventory-check">
+                <input type="checkbox" class="inventory-item" />
+                <span>Banking / payment accounts</span>
+              </label>
+
+              <label class="inventory-check">
+                <input type="checkbox" class="inventory-item" />
+                <span>Business social media</span>
+              </label>
+
+              <label class="inventory-check">
+                <input type="checkbox" class="inventory-item" />
+                <span>Cloud / business software</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="inventory-action">
+          <div>
+            <strong>Why this matters</strong>
             <p>
-              Illustrative disruption/recovery scenario used only to explain
-              the economic asymmetry.
+              You cannot prioritize protection if you do not know what
+              systems your business depends on.
             </p>
-
-            <ul>
-              <li>Business interruption</li>
-              <li>Data recovery</li>
-              <li>Operational downtime</li>
-              <li>Customer disruption</li>
-            </ul>
-
           </div>
 
+          <button id="reviewInventory" class="button primary" type="button">
+            Review inventory
+          </button>
         </div>
 
-
-        <div class="economic-boundary">
-
-          <strong>
-            Important:
-          </strong>
-
-          A low-cost protection layer does not eliminate cyber risk. SME
-          Shield should make the first practical steps easier and cheaper to
-          take, not promise complete security.
-
-        </div>
+        <p id="inventoryMessage" class="form-message"></p>
 
       </div>
 
-    </section>
+      <!-- FIVE ACTIONS -->
+      <div class="actions-section" id="actions">
 
-
-    <!-- =========================
-         WHAT WE DO / DON'T PROTECT
-    ========================== -->
-
-    <section class="section-dark">
-
-      <div class="container">
-
-        <div class="section-heading light">
-
-          <div class="eyebrow">
-            SECURITY BOUNDARY
-          </div>
-
-          <h2>
-            Clear about what we
-            <span>do and don't protect.</span>
-          </h2>
-
-        </div>
-
-
-        <div class="boundary-grid">
-
-          <div class="boundary-card">
-
-            <div class="boundary-icon positive">
-              ✓
-            </div>
-
-            <h3>
-              SME Shield helps with
-            </h3>
-
-            <ul>
-              <li>Basic security priorities</li>
-              <li>Device and account visibility</li>
-              <li>Backup verification</li>
-              <li>Actionable recommendations</li>
-              <li>Incident-response guidance</li>
-            </ul>
-
-          </div>
-
-
-          <div class="boundary-card">
-
-            <div class="boundary-icon negative">
-              ×
-            </div>
-
-            <h3>
-              SME Shield does not
-            </h3>
-
-            <ul>
-              <li>Guarantee complete security</li>
-              <li>Replace a security team</li>
-              <li>Act as an antivirus</li>
-              <li>Score or monitor employees</li>
-              <li>Automatically resolve major incidents</li>
-            </ul>
-
-          </div>
-
-        </div>
-
-
-        <div class="shadow-note">
-
-          <strong>
-            SHADOW CLAUSE
-          </strong>
-
+        <div class="section-heading compact">
+          <p class="eyebrow">STEP 3</p>
+          <h3>Your five priority actions</h3>
           <p>
-            Minimum telemetry only. No employee surveillance or scoring.
-            Simulated signals are clearly labeled. Human responsibility remains
-            visible for important incidents.
+            SME Shield does not try to fix everything. It identifies
+            the actions that can make the biggest practical difference.
           </p>
+        </div>
 
+        <div class="action-grid">
+
+          <button class="action-card" data-action="accounts">
+            <span class="action-number">01</span>
+            <span class="action-title">Protect critical accounts</span>
+            <span class="action-description">
+              Review access to email, banking and important business systems.
+            </span>
+            <span class="action-link">See recommendation →</span>
+          </button>
+
+          <button class="action-card" data-action="updates">
+            <span class="action-number">02</span>
+            <span class="action-title">Update important devices</span>
+            <span class="action-description">
+              Reduce preventable vulnerabilities on the devices you depend on.
+            </span>
+            <span class="action-link">See recommendation →</span>
+          </button>
+
+          <button class="action-card" data-action="backups">
+            <span class="action-number">03</span>
+            <span class="action-title">Verify backups</span>
+            <span class="action-description">
+              Know whether your critical business information can actually be recovered.
+            </span>
+            <span class="action-link">See recommendation →</span>
+          </button>
+
+          <button class="action-card" data-action="access">
+            <span class="action-number">04</span>
+            <span class="action-title">Reduce unnecessary access</span>
+            <span class="action-description">
+              Make sure people and systems only have the access they need.
+            </span>
+            <span class="action-link">See recommendation →</span>
+          </button>
+
+          <button class="action-card" data-action="response">
+            <span class="action-number">05</span>
+            <span class="action-title">Prepare for an incident</span>
+            <span class="action-description">
+              Know what to do and who to contact before an incident happens.
+            </span>
+            <span class="action-link">See recommendation →</span>
+          </button>
+
+        </div>
+
+        <div id="recommendationPanel" class="recommendation-panel hidden">
+          <div class="recommendation-header">
+            <span>SIMULATED AI SECURITY COPILOT</span>
+            <button id="closeRecommendation" type="button">×</button>
+          </div>
+
+          <h4 id="recommendationTitle">Recommendation</h4>
+          <p id="recommendationText"></p>
+
+          <div class="recommendation-next">
+            <strong>Next practical step</strong>
+            <p id="recommendationNext"></p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BACKUPS -->
+      <div class="panel" id="backups">
+
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">STEP 4</p>
+            <h3>Backup verification</h3>
+          </div>
+
+          <span class="status-badge warning">
+            Needs review
+          </span>
+        </div>
+
+        <p>
+          Having a backup is not enough. The important question is whether
+          your business can actually recover from it.
+        </p>
+
+        <div class="backup-grid">
+
+          <div class="backup-item">
+            <span>Last backup</span>
+            <strong>Unknown</strong>
+          </div>
+
+          <div class="backup-item">
+            <span>Recovery test</span>
+            <strong>Not verified</strong>
+          </div>
+
+          <div class="backup-item">
+            <span>Business-critical data</span>
+            <strong>Needs mapping</strong>
+          </div>
+
+        </div>
+
+        <button class="button secondary" id="verifyBackup" type="button">
+          Start backup review
+        </button>
+
+      </div>
+
+      <!-- INCIDENT RESPONSE -->
+      <div class="panel incident-panel" id="incident">
+
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">STEP 5</p>
+            <h3>Human incident response</h3>
+          </div>
+
+          <span class="status-badge">
+            Human support
+          </span>
+        </div>
+
+        <p>
+          When something goes wrong, the system should not pretend that
+          automation can replace human responsibility.
+        </p>
+
+        <div class="incident-path">
+
+          <div class="incident-step">
+            <span>1</span>
+            <strong>Identify</strong>
+            <small>Recognize the problem.</small>
+          </div>
+
+          <div class="incident-line"></div>
+
+          <div class="incident-step">
+            <span>2</span>
+            <strong>Contain</strong>
+            <small>Limit further damage.</small>
+          </div>
+
+          <div class="incident-line"></div>
+
+          <div class="incident-step">
+            <span>3</span>
+            <strong>Contact</strong>
+            <small>Reach human support.</small>
+          </div>
+
+          <div class="incident-line"></div>
+
+          <div class="incident-step">
+            <span>4</span>
+            <strong>Recover</strong>
+            <small>Restore business continuity.</small>
+          </div>
+
+        </div>
+
+        <button class="button primary" id="incidentButton" type="button">
+          Open incident response path
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- ECONOMIC COMPARISON -->
+    <section class="section economics">
+
+      <div class="section-heading">
+        <p class="eyebrow">OWNER VIEW</p>
+        <h2>Buy continuity, not cybersecurity.</h2>
+        <p>
+          The value proposition is simple: make practical protection easier
+          to understand and cheaper to justify than business interruption.
+        </p>
+      </div>
+
+      <div class="comparison">
+
+        <div class="comparison-column prevention">
+          <span class="comparison-label">PREVENTION</span>
+          <h3>Predictable monthly protection</h3>
+
+          <ul>
+            <li>Identify what matters</li>
+            <li>Prioritize five actions</li>
+            <li>Verify backups</li>
+            <li>Prepare human response</li>
+          </ul>
+        </div>
+
+        <div class="comparison-divider">
+          <span>VS.</span>
+        </div>
+
+        <div class="comparison-column recovery">
+          <span class="comparison-label">RECOVERY</span>
+          <h3>Unplanned business disruption</h3>
+
+          <ul>
+            <li>Potential downtime</li>
+            <li>Recovery costs</li>
+            <li>Lost sales</li>
+            <li>Customer disruption</li>
+          </ul>
         </div>
 
       </div>
 
     </section>
 
+    <!-- SECURITY BOUNDARY -->
+    <section class="section boundary">
 
-    <!-- =========================
-         INCIDENT RESPONSE
-    ========================== -->
+      <div class="section-heading">
+        <p class="eyebrow">SECURITY BOUNDARY</p>
+        <h2>No false security.</h2>
+        <p>
+          SME Shield is intentionally narrow. It helps a business understand
+          and act on practical protection gaps. It does not promise complete
+          cybersecurity.
+        </p>
+      </div>
 
-    <section class="section" id="incidentResponse">
+      <div class="boundary-grid">
 
-      <div class="container">
+        <div class="boundary-card">
+          <h3>What SME Shield does</h3>
 
-        <div class="incident-flow">
+          <ul>
+            <li>Helps identify important devices and accounts</li>
+            <li>Prioritizes practical actions</li>
+            <li>Helps verify backup readiness</li>
+            <li>Provides an incident-response path</li>
+            <li>Uses simulated AI recommendations in this prototype</li>
+          </ul>
+        </div>
 
-          <div class="eyebrow">
-            INCIDENT RESPONSE
-          </div>
+        <div class="boundary-card">
+          <h3>What SME Shield does NOT do</h3>
 
-          <h2>
-            If something happens,
-            <span>don't guess.</span>
-          </h2>
-
-          <div class="response-steps">
-
-            <div class="response-step">
-              <span>01</span>
-              <strong>Identify</strong>
-              <p>
-                Record what happened.
-              </p>
-            </div>
-
-            <div class="response-step">
-              <span>02</span>
-              <strong>Contain</strong>
-              <p>
-                Follow the immediate action guidance.
-              </p>
-            </div>
-
-            <div class="response-step">
-              <span>03</span>
-              <strong>Escalate</strong>
-              <p>
-                Connect with a human expert when required.
-              </p>
-            </div>
-
-            <div class="response-step">
-              <span>04</span>
-              <strong>Recover</strong>
-              <p>
-                Restore operations and review next steps.
-              </p>
-            </div>
-
-          </div>
-
+          <ul>
+            <li>Guarantee complete cybersecurity</li>
+            <li>Replace cybersecurity professionals</li>
+            <li>Monitor or score employees</li>
+            <li>Act as antivirus software</li>
+            <li>Automatically resolve every security incident</li>
+          </ul>
         </div>
 
       </div>
 
     </section>
-
 
   </main>
 
+  <footer>
+    <div>
+      <strong>SME Shield</strong>
+      <p>Protect your business before the breach.</p>
+    </div>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+    <div class="footer-note">
+      <p>
+        Prototype for educational purposes. Security signals, AI recommendations
+        and economic figures shown in this demo are simulated.
+      </p>
+    </div>
+  </footer>
 
-  <footer class="footer">
+  <!-- INCIDENT MODAL -->
+  <div id="incidentModal" class="modal hidden">
 
-    <div class="container footer-content">
+    <div class="modal-content">
 
-      <div>
+      <button id="closeIncident" class="modal-close" type="button">
+        ×
+      </button>
 
-        <div class="brand footer-brand">
-          <span class="brand-mark">◆</span>
-          SME Shield
+      <p class="eyebrow">SIMULATED INCIDENT FLOW</p>
+
+      <h2>What to do if something happens</h2>
+
+      <div class="modal-step">
+        <span>1</span>
+        <div>
+          <strong>Stop and identify</strong>
+          <p>
+            Do not keep clicking or changing systems randomly.
+            Document what you see.
+          </p>
         </div>
-
-        <p>
-          A prototype for practical cybersecurity protection for Mexican SMEs.
-        </p>
-
       </div>
 
-      <div class="footer-disclaimer">
+      <div class="modal-step">
+        <span>2</span>
+        <div>
+          <strong>Limit exposure</strong>
+          <p>
+            Follow your business response plan to reduce further disruption.
+          </p>
+        </div>
+      </div>
 
-        <strong>Prototype / simulated environment</strong>
+      <div class="modal-step">
+        <span>3</span>
+        <div>
+          <strong>Contact a human</strong>
+          <p>
+            Escalate the incident to qualified human support.
+          </p>
+        </div>
+      </div>
 
-        <p>
-          SME Shield is a Business Bending prototype. It does not provide
-          professional cybersecurity services and does not guarantee security.
-          Do not enter real sensitive information.
-        </p>
+      <div class="modal-step">
+        <span>4</span>
+        <div>
+          <strong>Recover and learn</strong>
+          <p>
+            Restore operations and review what should change afterward.
+          </p>
+        </div>
+      </div>
 
+      <div class="modal-footer">
+        <strong>Human responsibility remains part of the product.</strong>
       </div>
 
     </div>
 
-  </footer>
-
+  </div>
 
   <script src="script.js"></script>
 
