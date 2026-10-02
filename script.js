@@ -80,16 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
     restoreInventory(savedInventory);
   }
 
-  deviceCheckboxes.forEach((checkbox, index) => {
-    checkbox.addEventListener("change", () => {
-      updateInventoryCounts();
-    });
+  deviceCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", updateInventoryCounts);
   });
 
-  accountCheckboxes.forEach((checkbox, index) => {
-    checkbox.addEventListener("change", () => {
-      updateInventoryCounts();
-    });
+  accountCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", updateInventoryCounts);
   });
 
   reviewInventory?.addEventListener("click", () => {
@@ -117,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalAccounts = accounts.filter(Boolean).length;
 
     if (totalDevices === 0 && totalAccounts === 0) {
+
       inventoryStatus.textContent = "Needs information";
 
       inventoryMessage.textContent =
@@ -130,6 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     inventoryMessage.textContent =
       `Inventory saved locally: ${totalDevices} device categories and ${totalAccounts} account categories identified.`;
 
+    generatePriorityView(inventory);
   });
 
   function updateInventoryCounts() {
@@ -154,15 +152,19 @@ document.addEventListener("DOMContentLoaded", () => {
   function restoreInventory(inventory) {
 
     inventory.devices?.forEach((checked, index) => {
+
       if (deviceCheckboxes[index]) {
         deviceCheckboxes[index].checked = checked;
       }
+
     });
 
     inventory.accounts?.forEach((checked, index) => {
+
       if (accountCheckboxes[index]) {
         accountCheckboxes[index].checked = checked;
       }
+
     });
 
     updateInventoryCounts();
@@ -171,10 +173,75 @@ document.addEventListener("DOMContentLoaded", () => {
       inventory.devices?.some(Boolean) ||
       inventory.accounts?.some(Boolean)
     ) {
+
       inventoryStatus.textContent = "Reviewed";
+
       inventoryMessage.textContent =
         "Previously saved inventory restored.";
+
+      generatePriorityView(inventory);
     }
+  }
+
+
+  /* =========================
+     PRIORITY LOGIC
+  ========================= */
+
+  function generatePriorityView(inventory) {
+
+    const hasDevices =
+      inventory.devices?.some(Boolean);
+
+    const hasAccounts =
+      inventory.accounts?.some(Boolean);
+
+    const accountAction =
+      document.querySelector('[data-action="accounts"]');
+
+    const updateAction =
+      document.querySelector('[data-action="updates"]');
+
+    const backupAction =
+      document.querySelector('[data-action="backups"]');
+
+    const accessAction =
+      document.querySelector('[data-action="access"]');
+
+    const responseAction =
+      document.querySelector('[data-action="response"]');
+
+    /*
+      SME Shield deliberately keeps the logic narrow.
+      It does not calculate a fake "security score".
+      It simply highlights actions connected to the
+      business inventory.
+    */
+
+    if (hasAccounts && accountAction) {
+      accountAction.classList.add("priority-highlight");
+    }
+
+    if (hasDevices && updateAction) {
+      updateAction.classList.add("priority-highlight");
+    }
+
+    if ((hasDevices || hasAccounts) && backupAction) {
+      backupAction.classList.add("priority-highlight");
+    }
+
+    if (hasAccounts && accessAction) {
+      accessAction.classList.add("priority-highlight");
+    }
+
+    if ((hasDevices || hasAccounts) && responseAction) {
+      responseAction.classList.add("priority-highlight");
+    }
+
+    localStorage.setItem(
+      "smeShieldPriorityGenerated",
+      "true"
+    );
   }
 
 
@@ -273,7 +340,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   closeRecommendation?.addEventListener("click", () => {
+
     recommendationPanel.classList.add("hidden");
+
   });
 
 
