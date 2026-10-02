@@ -211,13 +211,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const responseAction =
       document.querySelector('[data-action="response"]');
 
-    /*
-      SME Shield deliberately keeps the logic narrow.
-      It does not calculate a fake "security score".
-      It simply highlights actions connected to the
-      business inventory.
-    */
-
     if (hasAccounts && accountAction) {
       accountAction.classList.add("priority-highlight");
     }
@@ -340,9 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   closeRecommendation?.addEventListener("click", () => {
-
     recommendationPanel.classList.add("hidden");
-
   });
 
 
@@ -373,6 +364,102 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =========================
+     ECONOMIC CALCULATOR
+  ========================= */
+
+  const dailyRevenue =
+    document.getElementById("dailyRevenue");
+
+  const downtimeDays =
+    document.getElementById("downtimeDays");
+
+  const calculateRisk =
+    document.getElementById("calculateRisk");
+
+  const calculatorResult =
+    document.getElementById("calculatorResult");
+
+  const exposureAmount =
+    document.getElementById("exposureAmount");
+
+  const exposureMessage =
+    document.getElementById("exposureMessage");
+
+  calculateRisk?.addEventListener("click", () => {
+
+    const revenue = Number(dailyRevenue?.value);
+    const days = Number(downtimeDays?.value);
+
+    if (!revenue || revenue <= 0) {
+
+      calculatorResult.classList.remove("hidden");
+
+      exposureAmount.textContent =
+        "$0 MXN";
+
+      exposureMessage.textContent =
+        "Enter an approximate daily revenue amount to generate the simulated estimate.";
+
+      return;
+    }
+
+    const exposure = revenue * days;
+
+    exposureAmount.textContent =
+      `$${exposure.toLocaleString("en-US")} MXN`;
+
+    exposureMessage.textContent =
+      `A ${days}-day disruption at this daily revenue level would represent approximately $${exposure.toLocaleString("en-US")} MXN in revenue exposure.`;
+
+    calculatorResult.classList.remove("hidden");
+
+    localStorage.setItem(
+      "smeShieldEconomicScenario",
+      JSON.stringify({
+        dailyRevenue: revenue,
+        downtimeDays: days,
+        estimatedExposure: exposure
+      })
+    );
+
+  });
+
+
+  /* =========================
+     RESTORE ECONOMIC SCENARIO
+  ========================= */
+
+  const savedEconomicScenario = JSON.parse(
+    localStorage.getItem("smeShieldEconomicScenario") || "null"
+  );
+
+  if (savedEconomicScenario) {
+
+    if (dailyRevenue) {
+      dailyRevenue.value =
+        savedEconomicScenario.dailyRevenue;
+    }
+
+    if (downtimeDays) {
+      downtimeDays.value =
+        savedEconomicScenario.downtimeDays;
+    }
+
+    if (exposureAmount) {
+      exposureAmount.textContent =
+        `$${savedEconomicScenario.estimatedExposure.toLocaleString("en-US")} MXN`;
+    }
+
+    if (exposureMessage) {
+      exposureMessage.textContent =
+        `A ${savedEconomicScenario.downtimeDays}-day disruption at this daily revenue level would represent approximately $${savedEconomicScenario.estimatedExposure.toLocaleString("en-US")} MXN in revenue exposure.`;
+    }
+
+    calculatorResult?.classList.remove("hidden");
+  }
+
+
+  /* =========================
      INCIDENT RESPONSE
   ========================= */
 
@@ -386,15 +473,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("closeIncident");
 
   incidentButton?.addEventListener("click", () => {
-
     incidentModal.classList.remove("hidden");
-
   });
 
   closeIncident?.addEventListener("click", () => {
-
     incidentModal.classList.add("hidden");
-
   });
 
   incidentModal?.addEventListener("click", (event) => {
